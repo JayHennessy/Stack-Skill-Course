@@ -1,0 +1,43 @@
+{% extends 'base.html'%}
+{% block body %}
+
+<!-- method post lets you send data to a webapplication -->
+<form mathod="POST" action="/findcommonletters" name="webapp">
+
+	<h2>Python</h2>
+	<strong>Sentence: </strong>
+
+	<!-- text input field where a user can enter a sentence -->
+	<input 	typ="test"
+			name="sentence"
+			size="80"
+			list="search_list"
+			placeholder="Enter sentence text">
+
+	<br />
+	<br />
+
+	<!-- get user to enter letters -->
+	<strong>Letters: </strong>
+
+	<!-- enter the letters into a txt box -->
+	<input	type="text"
+			name="letters"
+			size="10"
+			placeholder="Enter letters">
+
+	<br />
+	<br />
+
+	<!-- add a submit button -->
+	<button type="submit">
+		Common letters
+	</button>
+
+	<button type="submit" formaction="/countvowels">
+		Count vowels
+	</button>
+
+</form>
+
+{% endblock %}
